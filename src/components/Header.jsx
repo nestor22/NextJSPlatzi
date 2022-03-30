@@ -7,7 +7,7 @@ import iconMenu from "@icons/icon_menu.svg";
 import logo from "@logos/logo_yard_sale.svg";
 import shoppingCard from "@icons/icon_shopping_cart.svg";
 import MyOrder from "@containers/MyOrder";
-import styles from '@styles/Header.module.scss';
+import styles from '@styles/header.module.scss';
 
 const Header = () => {
   const [toggle, setToogle] = useState(false);
@@ -19,10 +19,10 @@ const Header = () => {
 
   return (
     <>
-    <nav className={styles.Nav}>
-      <img src={iconMenu} alt="menu" className="menu" />
+    <nav className={styles['Nav']}>
+      <img src={iconMenu} alt="menu" className={styles.menu} />
       <div className="navbar-left">
-        <img src={logo} alt="logo" className="nav-logo" />
+        <img src={logo} alt="logo" className={styles['nav-logo']} />
         <ul>
           <li>
             <a href="/">All</a>
@@ -44,12 +44,12 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-right">
+      <div className={styles['navbar-right']}>
         <ul>
-          <li className="navbar-email" onClick={handleTootle}>
+          <li className={styles['navbar-email']} onClick={handleTootle}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart" onClick={()=> setToobleOrder(!toggleOrder)}>
+          <li className={styles['navbar-shopping-cart']} onClick={()=> setToobleOrder(!toggleOrder)}>
             <img src={shoppingCard} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
