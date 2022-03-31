@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Image from "next/image"
 import AppContext from '../context/AppContext'
 import OrderItem from '../components/OrderItem';
 import flechita from '@icons/flechita.svg'
@@ -13,7 +14,7 @@ const MyOrder = () => {
 	return (
 		<aside className={styles.MyOrder}>
 			<div className="title-container">
-				<img src={flechita} alt="arrow" />
+				<Image src={flechita} alt="arrow" with="25px" height="25px"/>
 				<p className="title">My order</p>
 			</div>
 			<div className={styles['my-order-content']}>

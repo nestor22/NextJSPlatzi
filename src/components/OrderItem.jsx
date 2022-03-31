@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
-import iconClose from '@icons/icon_close.png';
+import AppContext from '@context/AppContext';
+import close from '@icons/icon_close.png';
 import styles from '@styles/OrderItem.module.scss';
 
 const OrderItem = ({product}) => {
+	
+
+	const handleRemove = product => {
+		removeFromCart(product);
+	}
 	return (
 		<div className={styles.OrderItem}>
 			<figure>
@@ -11,7 +17,7 @@ const OrderItem = ({product}) => {
 			</figure>
 			<p>{product?.title}</p>
 			<p>${product?.price}</p>
-			<img src={iconClose} alt="close" />
+			<Image className={styles.pointer, styles['more-clickable-area']} src={close} alt="close" onClick={() => handleRemove(product)} />
 		</div>
 	);
 }
