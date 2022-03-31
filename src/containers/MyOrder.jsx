@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import AppContext from '../context/AppContext'
 import OrderItem from '../components/OrderItem';
 import flechita from '@icons/flechita.svg'
-
+import Link from 'next/link'
 import styles from '@styles/MyOrder.module.scss';
 
 const MyOrder = () => {
@@ -26,9 +26,9 @@ const MyOrder = () => {
 					</p>
 					<p>$560.00</p>
 				</div>
-				<button className={styles['primary-button']}>
+				<Link className={styles['primary-button']} href="/checkout">
 					Checkout
-				</button>
+				</Link>
 			</div>
 		</aside>
 	);
