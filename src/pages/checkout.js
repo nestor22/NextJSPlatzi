@@ -6,9 +6,9 @@ import styles from '@styles/Checkout.module.scss';
 const checkout = () => {
   return (
     <>
-	<Head>
-		<title>Checkout</title>
-	</Head>
+      <Head>
+        <title>Checkout</title>
+      </Head>
       <div className={styles.Checkout}>
         <div className={styles['Checkout-container']}>
           <h1 className={styles.tittle}>My order</h1>
