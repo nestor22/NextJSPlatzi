@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>React Shop</title>
           {/* solo para lo de google analitys 
                      <script dangerouslySetInnerHTML={{
                         __html: `sadf`
